@@ -11,7 +11,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: rgb(0, 0, 0) url("../img/6104199.png") top right no-repeat;
+  background: rgb(0, 0, 0) url("../img/bg.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -27,16 +27,26 @@ body::before {
   padding-top: 100px;
   background-color: rgba(0, 0, 0, 0.734);
   text-align: center;
-  padding-bottom: 0;
+  padding-bottom: 30px;
 }
 
 #hero h1 {
-  margin: 0 0 15px 0;
-  font-size: 48px;
-  font-weight: 700;
+  margin: 0 0 30px 0;
+  font-size: 70px;
+  font-weight: 900;
   line-height: 56px;
-  color: #d2e0ed;
-  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-family: 'Minecraft', sans-serif;
+  line-height: 25px;
+  padding-right: 150px;
+  text-shadow: rgb(198, 198, 198) -4px 1px;
+  
+}
+#hero span{
+  color: rgb(214, 0, 0);
+  padding-left: 200px;
+  text-shadow: rgb(120, 0, 0) -4px 1px;
+
 }
 /*--------------------------------------------------------------
 # Header
@@ -353,7 +363,7 @@ body::before {
 # Sections & Section Header
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.734);
 }
@@ -648,12 +658,49 @@ section {
 }
 
 .blog .sidebar .sidebar-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
-  padding: 0;
-  margin: 0;
-  color: var(--color-secondary);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: black;
 }
+.blog .sidebar h1{
+  color: black;
+  font-weight: 700;
+  text-align: left;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+}
+/*copy text*/
+.textBox
+{
+  height:300px;
+  width:300px;
+}
+
+button{
+  height:50px;
+  width:100px;
+  font-size:15px;
+  font-family: 'Oswald', sans-serif;
+  
+  cursor:pointer;
+  background-color:rgb(255, 166, 0);
+  text-transform: uppercase;
+  border-color: white;
+  border-style: solid;
+  border-radius: 10px;
+}
+.ip-text{
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 600;
+}
+  .ip-text span{
+    margin-right: 5px;
+  }
 
 .blog .sidebar .sidebar-item+.sidebar-item {
   margin-top: 40px;
@@ -745,7 +792,8 @@ section {
 }
 
 .blog .sidebar .recent-posts h4 a {
-  color: var(--color-secondary);
+  color: black;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -755,7 +803,6 @@ section {
 
 .blog .sidebar .recent-posts time {
   display: block;
-  font-style: italic;
   font-size: 14px;
   color: rgba(var(--color-default-rgb), 0.4);
 }
@@ -840,7 +887,7 @@ Frame Discord
 */
 iframe{
   width: 342px; 
-  height: 400px;
+  height: 350px;
   border-radius: 10px;
 }
 @media (max-width: 992px) {
@@ -876,4 +923,28 @@ iframe{
     .blog p{
       text-align: justify;
     }
-    
+    /* Pie de pagina */
+#footer {
+  background: #060606;
+  padding: 0 0 20px 0;
+  color: #eee;
+  font-size: 14px;
+}
+#footer .copyright {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #f1f7ff;
+}
+
+#footer .credits a {
+  color: #bfddfe;
+}
+
+#footer .credits a:hover {
+  color: #f1f7ff;
+}
