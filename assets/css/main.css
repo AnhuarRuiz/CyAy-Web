@@ -28,7 +28,7 @@ body::before {
 #hero {
   width: 100%;
   padding-top: 100px;
-  background-color: rgba(0, 0, 0, 0.734);
+  background-color: rgba(0, 0, 0, 0.811);
   text-align: center;
   padding-bottom: 30px;
 }
@@ -41,16 +41,16 @@ body::before {
   color: #ffffff;
   font-family: 'Minecraft', sans-serif;
   line-height: 25px;
-  padding-right: 150px;
+  padding-bottom: 4px;
   text-shadow: rgb(198, 198, 198) -4px 1px;
-
-
 }
 
 #hero span {
   color: rgb(214, 0, 0);
-  padding-left: 200px;
   text-shadow: rgb(120, 0, 0) -4px 1px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  border-bottom: rgb(255, 255, 255) solid 4px;
 }
 
 /*--------------------------------------------------------------
@@ -60,7 +60,7 @@ body::before {
   z-index: 997;
   transition: all 0.5s;
   padding: 5px 0;
-  background-color: rgba(0, 0, 0, 0.734);
+  background-color: rgba(0, 0, 0, 0.811);
 }
 
 #header .logo h1 {
@@ -105,53 +105,33 @@ body::before {
 
 .navbar a,
 .navbar a:focus {
+  transition: 0.4s;
+  backdrop-filter: blur(4px);
+  padding: 1px 40px;
+  background-color: rgba(216, 46, 40, 0.33);
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 41px;
+  letter-spacing: 0.01em;
+  border-radius: 10px;
+  border-color: #e44c4c;
+  border-width: 2px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
+  justify-content: center;
   white-space: nowrap;
-  transition: 0.3s;
-
-  color: white;
-  text-decoration: none;
-  font-family: 'Space Grotesk', sans-serif;
-
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  padding: 10px 30px;
-  background-color: #a60101;
-  border-radius: 2px;
-
-  box-shadow: 0 .5rem rgba(0, 0, 0, 0.415);
-  position: relative;
-  transition: all .35s ease-in-out;
-  margin: 10px;
+  border-style: solid;
 }
 
-.navbar a::before {
-  content: '';
-  width: 100%;
-  height: 0.5rem;
-  display: block;
-  position: absolute;
-  background-color: #a43636;
-  border-radius: 2px 2px 0px 0px;
-  top: 0;
-  left: 0;
-  transition: all .25s ease-in-out;
-}
-
-.navbar a::after {
-  content: '';
-  width: 100%;
-  height: 0.5rem;
-  display: block;
-  position: absolute;
-  background-color: #730f0f;
-  border-radius: 0px 0px 2px 2px;
-  bottom: 0;
-  left: 0;
-  transition: all .1s ease-in-out;
+.navbar a:hover {
+  transition: all ease-in-out 0.3s;
+  transform: scale(0.89);
+  border-style: solid;
+  border-color: #9e3636;
+  border-width: 2px;
 }
 
 .navbar a i,
@@ -371,18 +351,7 @@ body::before {
 section {
   padding: 30px 0;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.734);
-}
-
-.section-header p {
-  margin: 0 auto;
-  color: var(--color-secondary-light);
-}
-
-@media (min-width: 1280px) {
-  .section-header p {
-    max-width: 80%;
-  }
+  background-color: rgba(0, 0, 0, 0.811);
 }
 
 /*--------------------------------------------------------------
@@ -392,7 +361,7 @@ section {
   box-shadow: 0 4px 16px rgba(var(--color-black-rgb), 0.1);
   padding: 30px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.911);
+  background-color: rgba(0, 0, 0, 0.637);
   border-radius: 10px;
 }
 
@@ -415,62 +384,30 @@ section {
 }
 
 .blog .posts-list .title a {
-  color: var(--color-secondary);
-  transition: 0.3s;
-}
-
-.blog .posts-list .title a:hover {
-  color: var(--color-primary);
-}
-
-.blog .posts-list .meta-top {
-  margin-top: 20px;
-  color: var(--color-gray);
-}
-
-.blog .posts-list .meta-top ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.blog .posts-list .meta-top ul li+li {
-  padding-left: 20px;
-}
-
-.blog .posts-list .meta-top i {
-  font-size: 16px;
-  margin-right: 8px;
-  line-height: 0;
-  color: rgba(var(--color-primary-rgb), 0.8);
-}
-
-.blog .posts-list .meta-top a {
-  color: var(--color-gray);
-  font-size: 14px;
-  display: inline-block;
-  line-height: 1;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  text-align: center;
+  font-size: 21px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #e44c4c 0%, #e7344b 57.96%, #ea1649 128.94%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: none;
 }
 
 .blog .posts-list .content {
   margin-top: 20px;
 }
 
-.blog .posts-list .read-more a {
-  display: inline-block;
-  background: var(--color-primary);
-  color: var(--color-white);
-  padding: 8px 30px;
-  transition: 0.3s;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-.blog .posts-list .read-more a:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
+.blog .posts-list .content p {
+  color: rgb(196, 196, 196);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: justify;
+  font-style: italic;
 }
 
 /*--------------------------------------------------------------
@@ -478,7 +415,7 @@ section {
 --------------------------------------------------------------*/
 .blog .sidebar {
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.827);
+  background-color: rgba(0, 0, 0, 0.637);
   justify-content: center;
   border-radius: 10px;
 }
@@ -486,8 +423,8 @@ section {
 .blog .sidebar .sidebar-title {
   font-size: 25px;
   font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   color: rgb(255, 255, 255);
 }
 
@@ -504,9 +441,9 @@ section {
   background-clip: text;
   text-fill-color: transparent;
   text-shadow: none;
-
 }
-.blog .sidebar h2{
+
+.blog .sidebar h2 {
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -515,13 +452,16 @@ section {
   font-size: 15px;
   padding-bottom: 15px;
 }
-.blog .sidebar h3{
+
+.blog .sidebar h3 {
   text-align: center;
   color: rgb(213, 213, 213);
   font-weight: 700;
   font-size: 18px;
+  padding-bottom: 10px;
 }
-.blog .sidebar i{
+
+.blog .sidebar i {
   color: white;
 }
 
@@ -539,9 +479,14 @@ button {
   margin: 5px;
 }
 
+button:hover {
+  filter: drop-shadow(1px 1px 11px #ff0000)
+}
+
 .blog .sidebar .sidebar-item+.sidebar-item {
   margin-top: 40px;
 }
+
 .blog .sidebar .recent-posts .post-item {
   display: flex;
 }
@@ -631,6 +576,7 @@ iframe {
   width: 32px;
   height: 32px;
   overflow: hidden;
+  border-radius: 8px;
 
 }
 
@@ -639,6 +585,12 @@ iframe {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.author-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(228, 228, 228);
 }
 
 ol,
@@ -653,10 +605,6 @@ ul {
 i {
   width: 32px;
   height: 32px;
-}
-
-.blog p {
-  text-align: justify;
 }
 
 /* Pie de pagina */
@@ -688,4 +636,7 @@ i {
 
 padding-test {
   padding-bottom: 100px;
+}
+.hide-ip{
+  opacity: 0;
 }
