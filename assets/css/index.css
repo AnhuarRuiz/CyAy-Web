@@ -123,10 +123,9 @@ section {
 }
 
 .navbar a:hover {
-  transition: all ease-in-out 0.3s;
-  transform: scale(0.89);
+  transition: all ease-in-out 0.1s;
   border-style: solid;
-  border-color: #9e3636;
+  border-color: white;
   border-width: 2px;
 }
 
