@@ -1,6 +1,4 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+/* General */
 :root {
   scroll-behavior: smooth;
 }
@@ -13,7 +11,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: rgb(0, 0, 0) url("../img/bg.png") top right no-repeat;
+  background: rgb(0, 0, 0) url("../img/background.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -22,9 +20,13 @@ body::before {
   z-index: -1;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+section {
+  padding: 30px 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.811);
+}
+
+/* Hero */
 #hero {
   width: 100%;
   padding-top: 100px;
@@ -43,6 +45,7 @@ body::before {
   line-height: 25px;
   padding-bottom: 4px;
   text-shadow: rgb(198, 198, 198) -4px 1px;
+  letter-spacing: 3px;
 }
 
 #hero span {
@@ -53,9 +56,7 @@ body::before {
   border-bottom: rgb(255, 255, 255) solid 4px;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/* Header */
 #header {
   z-index: 997;
   transition: all 0.5s;
@@ -74,12 +75,7 @@ body::before {
   font-family: "Poppins", sans-serif;
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
+/* Nav PC */
 .navbar {
   padding: 0;
   text-align: center;
@@ -232,21 +228,21 @@ body::before {
   }
 }
 
-/**
-* Mobile Navigation 
-*/
+/* Nav Mobil */
 .mobile-nav-toggle {
-  color: #fdc134;
-  font-size: 28px;
+  color: #ffffff;
+  font-size: 30px;
   cursor: pointer;
   display: none;
-  line-height: 0;
   transition: 0.5s;
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 20px;
+  top: 20px;
   z-index: 9998;
-  border: 0;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -266,27 +262,27 @@ body::before {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(18, 33, 46, 0.9);
+  background-color: rgba(0, 0, 0, 0.811);
   transition: 0.3s;
   z-index: 999;
 }
 
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
 }
+
 
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
+  top: 80px;
   right: 15px;
-  bottom: 15px;
   left: 15px;
   padding: 10px 0;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.637);
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -295,68 +291,10 @@ body::before {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #213b52;
+  color: #ffffff;
 }
 
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: #fdc134;
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-  margin: 15px;
-  display: block;
-  border: 0;
-}
-
-.navbar-mobile .dropdown ul {
-  position: static;
-  display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 1;
-  visibility: visible;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-
-.navbar-mobile .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-}
-
-.navbar-mobile .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: #fdc134;
-}
-
-.navbar-mobile .dropdown>.dropdown-active {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-# Sections & Section Header
---------------------------------------------------------------*/
-section {
-  padding: 30px 0;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.811);
-}
-
-/*--------------------------------------------------------------
-# Blog Home Posts List
---------------------------------------------------------------*/
+/* Seccion de Publicaciones */
 .blog .posts-list article {
   box-shadow: 0 4px 16px rgba(var(--color-black-rgb), 0.1);
   padding: 30px;
@@ -410,9 +348,7 @@ section {
   font-style: italic;
 }
 
-/*--------------------------------------------------------------
-# Blog Sidebar
---------------------------------------------------------------*/
+/* Seccion de la Sidebar */
 .blog .sidebar {
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.637);
@@ -480,6 +416,7 @@ button {
 }
 
 button:hover {
+  transition: all ease-in-out 0.3s;
   filter: drop-shadow(1px 1px 11px #ff0000)
 }
 
@@ -489,15 +426,19 @@ button:hover {
 
 .blog .sidebar .recent-posts .post-item {
   display: flex;
+
 }
 
 .blog .sidebar .recent-posts .post-item+.post-item {
   margin-top: 15px;
+
 }
 
 .blog .sidebar .recent-posts img {
   width: 80px;
+  border-radius: 5px;
   margin-right: 15px;
+
 }
 
 .blog .sidebar .recent-posts h4 {
@@ -513,51 +454,7 @@ button:hover {
   color: #e44c4c;
 }
 
-/*--------------------------------------------------------------
-# Blog Home Pagination
---------------------------------------------------------------*/
-.blog .blog-pagination {
-  margin-top: 30px;
-  color: red;
-}
-
-.blog .blog-pagination ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.blog .blog-pagination li {
-  margin: 0 5px;
-  transition: 0.3s;
-  background-color: rgb(183, 183, 183);
-  border-radius: 100px;
-}
-
-.blog .blog-pagination li a {
-  color: rgb(0, 0, 0);
-  padding: 7px 16px;
-  display: flex;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.blog .blog-pagination li.active,
-.blog .blog-pagination li:hover {
-  background-color: white;
-  border-radius: 100px;
-}
-
-.blog .blog-pagination li.active a,
-.blog .blog-pagination li:hover a {
-  color: black;
-}
-
-/* 
-Frame Discord
-*/
+/* Frame de Discord */
 iframe {
   width: 342px;
   height: 350px;
@@ -609,34 +506,53 @@ i {
 
 /* Pie de pagina */
 #footer {
-  background: #060606;
+  background-color: rgba(0, 0, 0, 0.811);
   padding: 0 0 15px 0;
   color: #eee;
   font-size: 14px;
+  font-weight: 600;
 }
 
 #footer .copyright {
   text-align: center;
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.57);
 }
 
-#footer .credits {
+#footer .copyright {
   text-align: center;
   font-size: 13px;
-  color: #f1f7ff;
 }
 
-#footer .credits a {
-  color: #bfddfe;
+#footer .copyright a {
+  font-weight: 800;
+  background: linear-gradient(90deg, #e44c4c 0%, #e7344b 57.96%, #ea1649 128.94%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: none;
 }
 
-#footer .credits a:hover {
-  color: #f1f7ff;
+@media (max-width: 992px) {
+  #footer .copyright {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+  }
 }
 
 padding-test {
   padding-bottom: 100px;
 }
-.hide-ip{
+
+.hide-ip {
   opacity: 0;
 }
