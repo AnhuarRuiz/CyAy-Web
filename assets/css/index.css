@@ -11,7 +11,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: rgb(0, 0, 0) url("../img/background.png") top right no-repeat;
+  background-color: white;
   background-size: cover;
   left: 0;
   right: 0;
@@ -554,4 +554,36 @@ padding-test {
 
 .hide-ip {
   opacity: 0;
+}
+
+/* TEST FORM*/
+
+form{
+  width: 700px;
+  margin: auto;
+  background-color: #8bf;
+  margin-top: 100px;
+}
+input{
+  margin: 15px;
+  padding: 10px;
+  width: 640px;
+  font-size: 18px;
+  border: none;
+  margin-bottom: 5px;
+}
+input[type="submite"]{
+  margin-bottom: 15px;
+  margin-top: 5px
+}
+textarea{
+  font-size: 18px;
+  margin: 15px;
+  padding: 10px;
+  min-height: 100px;
+  max-height: 300px;
+  min-width: 640px;
+  max-width: 640px;
+  border: none;
+  margin-bottom: 5px;
 }

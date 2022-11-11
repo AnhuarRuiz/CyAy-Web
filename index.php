@@ -234,6 +234,15 @@
 
   </main>
 
+  <section id="form">
+    <form>
+      <input type="text" placeholder="name" name="name">
+      <input type="email" placeholder="email" name="email">
+      <input type="text" placeholder="asunto" name="asunto">
+      <textarea placeholder="mensaje" name="msg"></textarea>
+      <input type="submit">
+    </form>
+  </section>
   <!-- Pie de pagina -->
   <footer id="footer">
     <div class="container">
@@ -243,7 +252,7 @@
       </div>
       <ip class="hide-ip" id="p2">creepyanarchy.xyz</ip>
   </footer>
-
+  <?php include 'soporte.php';?>
   <!-- JavaScript -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
