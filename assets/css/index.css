@@ -11,7 +11,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background-color: white;
+  background-image: url(../img/background.png);
   background-size: cover;
   left: 0;
   right: 0;
@@ -23,14 +23,14 @@ body::before {
 section {
   padding: 30px 0;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.811);
+  background-color: rgba(0, 0, 0, 0.884);
 }
 
 /* Hero */
 #hero {
   width: 100%;
   padding-top: 100px;
-  background-color: rgba(0, 0, 0, 0.811);
+  background-color: rgba(0, 0, 0, 0.884);
   text-align: center;
   padding-bottom: 30px;
 }
@@ -61,7 +61,7 @@ section {
   z-index: 997;
   transition: all 0.5s;
   padding: 5px 0;
-  background-color: rgba(0, 0, 0, 0.811);
+  background-color: rgba(0, 0, 0, 0.884);
 }
 
 #header .logo h1 {
@@ -142,6 +142,7 @@ section {
 .navbar .active:focus,
 .navbar li:hover>a {
   color: #fff;
+  border-color: white;
 }
 
 .navbar .getstarted,
@@ -505,7 +506,7 @@ i {
 
 /* Pie de pagina */
 #footer {
-  background-color: rgba(0, 0, 0, 0.811);
+  background-color: rgba(0, 0, 0, 0.884);
   padding: 0 0 15px 0;
   color: #eee;
   font-size: 14px;
@@ -558,13 +559,14 @@ padding-test {
 
 /* TEST FORM*/
 
-form{
+form {
   width: 700px;
   margin: auto;
   background-color: #8bf;
   margin-top: 100px;
 }
-input{
+
+input {
   margin: 15px;
   padding: 10px;
   width: 640px;
@@ -572,11 +574,13 @@ input{
   border: none;
   margin-bottom: 5px;
 }
-input[type="submite"]{
+
+input[type="submite"] {
   margin-bottom: 15px;
   margin-top: 5px
 }
-textarea{
+
+textarea {
   font-size: 18px;
   margin: 15px;
   padding: 10px;
@@ -586,4 +590,111 @@ textarea{
   max-width: 640px;
   border: none;
   margin-bottom: 5px;
+}
+
+/* Seccion de Informacion */
+#informacion h1 {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 21px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #e44c4c 0%, #e7344b 57.96%, #ea1649 128.94%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: none;
+}
+
+#informacion p {
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  font-weight: 550;
+  font-size: 15px;
+}
+
+#informacion span {
+  color: #cc4242;
+  font-style: italic;
+}
+
+#informacion a {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  transition: 0.4s;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  backdrop-filter: blur(4px);
+  background-color: rgba(216, 46, 40, 0.33);
+  border-radius: 10px;
+  border-color: #e44c4c;
+  border-width: 2px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-style: solid;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contacto-text {
+  color: rgb(255, 255, 255) !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+}
+
+.contacto-text i {
+  color: #d52727;
+}
+
+#informacion a:hover {
+  border-color: white;
+  border-radius: 15px;
+  filter: drop-shadow(1px 1px 5px #971f1f)
+}
+
+.cards {
+  background-color: rgba(0, 0, 0, 0.851);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.resume-item {
+  padding: 0 0 25px 25px;
+  margin-top: -2px;
+  border-left: 2px solid #971f1f;
+  position: relative;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #971f1f;
+}
+
+@media (max-width: 992px) {
+  .cards {
+    margin: 10px;
+    padding: 50px 15px 50px 15px;
+  }
+
+  #informacion p {
+    font-size: 13px;
+    text-align: justify;
+    font-weight: 550;
+  }
 }
